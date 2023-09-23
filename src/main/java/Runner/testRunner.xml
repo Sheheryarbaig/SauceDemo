@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"
+[
+<!ENTITY browser "chrome">
+<!ENTITY emailReport "on">
+<!ENTITY emailRecipients "Sheheryaralibaig@gmail.com">
+]>
+<suite name="Suite" verbose="10" configfailurepolicy="skip">
+
+    <listeners>
+        <listener class-name="Runner.TestRunnerListener" />
+    </listeners>
+
+        <test name="Small World Reporting">
+            <parameter name="browser" value= "&browser;" />
+            <parameter name="emailReport" value="&emailReport;" />
+            <parameter name="emailRecipients" value="&emailRecipients;" />
+            <classes>
+                <class name="Runner.SauceDemoRunner" />
+            </classes>
+        </test>
+
+</suite>
